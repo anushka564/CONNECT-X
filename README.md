@@ -1,4 +1,4 @@
-ConnectX
+# ConnectX
 
 AI-Driven Career Intelligence and Opportunity Management Platform
 
@@ -8,27 +8,77 @@ The platform addresses a common problem in student career discovery: opportuniti
 
 ConnectX centralizes this process and uses Artificial Intelligence, semantic matching, document intelligence, cloud-native infrastructure, and personalized recommendations to help students discover and pursue opportunities more effectively.
 
----
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)
+![React](https://img.shields.io/badge/Frontend-React-61DAFB.svg)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen.svg)
+![AWS](https://img.shields.io/badge/Cloud-AWS-orange.svg)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)
 
-1. Project Vision
+## Table of Contents
+
+- [Project Vision](#project-vision)
+- [Problem Statement](#problem-statement)
+- [Proposed Solution](#proposed-solution)
+- [Core Objectives](#core-objectives)
+- [Target Users](#target-users)
+  - [Students](#students)
+  - [Administrators](#administrators)
+  - [Super Administrators](#super-administrators)
+- [Major Features](#major-features)
+  - [Authentication and Authorization](#authentication-and-authorization)
+  - [Student Profile](#student-profile)
+  - [Resume Intelligence](#resume-intelligence)
+  - [Opportunity Management](#opportunity-management)
+  - [Job Description Intelligence](#job-description-intelligence)
+  - [Eligibility Engine](#eligibility-engine)
+  - [AI Matching Engine](#ai-matching-engine)
+  - [Matching Strategy](#matching-strategy)
+  - [Explainable AI](#explainable-ai)
+  - [Semantic Skill Matching](#semantic-skill-matching)
+  - [Personalized Recommendation Engine](#personalized-recommendation-engine)
+  - [Skill Gap Analysis](#skill-gap-analysis)
+  - [AI Career Assistant](#ai-career-assistant)
+  - [Retrieval-Augmented Generation](#retrieval-augmented-generation)
+  - [Automated Opportunity Ingestion](#automated-opportunity-ingestion)
+  - [Duplicate Opportunity Detection](#duplicate-opportunity-detection)
+  - [Opportunity Classification](#opportunity-classification)
+  - [Deadline Intelligence](#deadline-intelligence)
+  - [Notifications](#notifications)
+  - [Application Tracking](#application-tracking)
+  - [Admin Dashboard](#admin-dashboard)
+  - [Analytics](#analytics)
+- [Technology Stack](#technology-stack)
+- [High-Level Architecture](#high-level-architecture)
+- [Cloud Architecture Principles](#cloud-architecture-principles)
+- [Event-Driven Architecture](#event-driven-architecture)
+- [Security Architecture](#security-architecture)
+- [Data Privacy](#data-privacy)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+  - [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [API Overview](#api-overview)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Vision
 
 The vision of ConnectX is to build an intelligent career ecosystem rather than another conventional job portal.
 
-Traditional platforms primarily answer:
+Traditional platforms primarily answer: "What opportunities are available?"
 
-«"What opportunities are available?"»
+ConnectX aims to answer: "Which opportunities are relevant to me, why are they relevant, what am I eligible for, what skills am I missing, and what should I do next?"
 
-ConnectX aims to answer:
+The core principle:
 
-«"Which opportunities are relevant to me, why are they relevant, what am I eligible for, what skills am I missing, and what should I do next?"»
+> ConnectX does not simply display opportunities. It understands the student, understands the opportunity, and intelligently connects the two.
 
-The core principle is:
-
-«ConnectX does not simply display opportunities. It understands the student, understands the opportunity, and intelligently connects the two.»
-
----
-
-2. Problem Statement
+## Problem Statement
 
 Students often struggle to discover and evaluate relevant internships, jobs, and placement opportunities because information is fragmented across multiple communication channels and platforms.
 
@@ -63,9 +113,7 @@ Existing job portals generally provide search, filtering, and keyword-based reco
 
 This creates information overload, inefficient searching, missed opportunities, and poor personalization.
 
----
-
-3. Proposed Solution
+## Proposed Solution
 
 ConnectX provides a centralized platform where students can maintain their career profiles and discover opportunities through an intelligent recommendation engine.
 
@@ -88,177 +136,63 @@ The platform combines:
 - Event-driven automation
 - Security and auditability
 
----
+## Core Objectives
 
-4. Core Objectives
+| Objective | Description |
+| --- | --- |
+| Centralize Opportunities | Provide a single platform for discovering internships, jobs, placements, projects, competitions, certifications, and other career opportunities. |
+| Personalize Discovery | Recommend opportunities based on skills, education, CGPA, graduation year, department, experience, career interests, preferred roles, preferred locations, and previous interactions. |
+| Automate Opportunity Understanding | Automatically extract structured information from PDFs, documents, images, text, CSV files, Excel files, and job descriptions. |
+| Improve Eligibility Verification | Use deterministic rules for hard eligibility requirements such as minimum CGPA, graduation year, department, degree, experience requirements, and location restrictions. |
+| Provide Explainable Recommendations | Explain why an opportunity matches, the matching skills, missing skills, eligibility status, match score, and important requirements. |
+| Identify Skill Gaps | Compare a student's current capabilities with target opportunity requirements and identify missing or weak skills. |
+| Build a Scalable Cloud Platform | Use cloud-native infrastructure for scalable processing, secure document storage, asynchronous workloads, AI processing, monitoring, notifications, and automated deployments. |
 
-The primary objectives of ConnectX are:
+## Target Users
 
-4.1 Centralize Opportunities
+| Role | Description |
+| --- | --- |
+| STUDENT | Discover opportunities, build a career profile, get recommendations, and track applications. |
+| ADMIN | Create and manage opportunities, review AI-extracted information, and monitor platform activity. |
+| SUPER_ADMIN | Manage administrators, system configuration, permissions, audit logs, and governance. |
 
-Provide a single platform for discovering internships, jobs, placements, projects, competitions, certifications, and other career opportunities.
+### Students
 
-4.2 Personalize Discovery
+Students can register and authenticate, build a career profile (education, skills, projects, certifications, experience, resume, preferences), upload resumes, define career interests and preferred roles or locations, discover opportunities with match scores, understand eligibility, identify skill gaps, save opportunities, track applications, receive notifications, and interact with the AI career assistant.
 
-Recommend opportunities based on:
+### Administrators
 
-- Skills
-- Education
-- CGPA
-- Graduation year
-- Department
-- Experience
-- Career interests
-- Preferred roles
-- Preferred locations
-- Previous interactions
+Administrators can create opportunities, upload opportunity documents, import CSV/Excel data, review and approve AI-extracted information, edit, publish or unpublish opportunities, manage students, categories and deadlines, monitor applications, review AI processing, and view analytics.
 
-4.3 Automate Opportunity Understanding
+### Super Administrators
 
-Automatically extract structured information from:
+Super administrators can manage administrators and permissions, manage system configuration and platform-wide settings, review audit logs, manage AI policies and data governance, and monitor system health.
 
-- PDFs
-- Documents
-- Images
-- Text
-- CSV files
-- Excel files
-- Job descriptions
+## Major Features
 
-4.4 Improve Eligibility Verification
+### Authentication and Authorization
 
-Use deterministic rules for hard eligibility requirements such as:
+Secure authentication with role-based authorization. Roles: STUDENT, ADMIN, SUPER_ADMIN.
 
-- Minimum CGPA
-- Graduation year
-- Department
-- Degree
-- Experience requirements
-- Location restrictions
+Authorization is always enforced on the backend. Frontend role restrictions alone are not considered security controls.
 
-4.5 Provide Explainable Recommendations
+### Student Profile
 
-Every recommendation should explain:
+A student profile contains:
 
-- Why the opportunity matches
-- Matching skills
-- Missing skills
-- Eligibility status
-- Match score
-- Important requirements
+| Section | Contents |
+| --- | --- |
+| Personal Information | Name, contact, basic profile data |
+| Academic Information | Degree, department, CGPA, graduation year |
+| Skills | Skill names with proficiency levels |
+| Projects | Titles, descriptions, technologies, links |
+| Certifications | Names, issuers, validity |
+| Experience | Roles, companies, durations |
+| Resume | Stored document and extracted data |
+| Preferences | Preferred roles, locations, career interests, target technologies |
+| Application History | Applied, saved, and tracked opportunities |
 
-4.6 Identify Skill Gaps
-
-Compare a student's current capabilities with target opportunity requirements and identify missing or weak skills.
-
-4.7 Build a Scalable Cloud Platform
-
-Use cloud-native infrastructure to support:
-
-- Scalable processing
-- Secure document storage
-- Asynchronous workloads
-- AI processing
-- Monitoring
-- Notifications
-- Automated deployments
-
----
-
-5. Target Users
-
-5.1 Students
-
-Students can:
-
-- Register and authenticate
-- Build their career profile
-- Upload resumes
-- Add skills
-- Add projects
-- Add certifications
-- Add academic information
-- Define career interests
-- Discover opportunities
-- View match scores
-- Understand eligibility
-- Identify skill gaps
-- Save opportunities
-- Track applications
-- Receive notifications
-- Interact with the AI career assistant
-
-5.2 Administrators
-
-Administrators can:
-
-- Create opportunities
-- Upload opportunity documents
-- Import CSV/Excel data
-- Review AI-extracted information
-- Approve opportunities
-- Edit opportunities
-- Publish/unpublish opportunities
-- Manage students
-- Manage categories
-- Monitor applications
-- Review AI processing
-- View analytics
-- Manage deadlines
-
-5.3 Super Administrators
-
-Super administrators can:
-
-- Manage administrators
-- Manage system configuration
-- Manage permissions
-- Review audit logs
-- Manage AI policies
-- Manage platform-wide settings
-- Control data governance
-- Monitor system health
-
----
-
-6. Major Features
-
-6.1 Authentication and Authorization
-
-The system will implement secure authentication and role-based authorization.
-
-Roles:
-
-STUDENT
-ADMIN
-SUPER_ADMIN
-
-Authorization must be enforced on the backend.
-
-Frontend role restrictions alone are not considered security controls.
-
----
-
-7. Student Profile
-
-A student profile should contain:
-
-Personal Information
-Academic Information
-Skills
-Projects
-Certifications
-Experience
-Resume
-Preferred Roles
-Preferred Locations
-Career Interests
-Target Technologies
-Application History
-Saved Opportunities
-
-Example:
-
+```
 Student
 ├── Education
 ├── Skills
@@ -268,168 +202,128 @@ Student
 ├── Resume
 ├── Preferences
 └── Applications
+```
 
----
+### Resume Intelligence
 
-8. Resume Intelligence
+Students can upload resumes in supported formats. The processing pipeline:
 
-Students can upload resumes in supported formats.
-
-Processing pipeline:
-
+```
 Resume Upload
-      |
-      v
+     |
+     v
 Private Cloud Storage
-      |
-      v
+     |
+     v
 Document Processing
-      |
-      v
+     |
+     v
 Text Extraction
-      |
-      v
+     |
+     v
 AI/NLP Processing
-      |
-      v
+     |
+     v
 Structured Student Profile
-      |
-      v
+     |
+     v
 Validation
-      |
-      v
+     |
+     v
 Profile Update
+```
 
-The system may extract:
+The system may extract name, education, skills, projects, certifications, experience, technologies, domains, and achievements.
 
-- Name
-- Education
-- Skills
-- Projects
-- Certifications
-- Experience
-- Technologies
-- Domains
-- Achievements
+AI-generated information is treated as extracted information and never silently overwrites user-provided information without validation.
 
-AI-generated information must be treated as extracted information and should not silently overwrite user-provided information without validation.
+### Opportunity Management
 
----
+Each opportunity contains structured information:
 
-9. Opportunity Management
+| Field | Description |
+| --- | --- |
+| Company | Organization offering the opportunity |
+| Title | Role or position title |
+| Description | Full description text |
+| Category | Classification such as Cloud Computing or Cybersecurity |
+| Required Skills | Skills required for the role |
+| Eligibility | Eligibility criteria text |
+| Minimum CGPA | Deterministic CGPA cutoff |
+| Graduation Year | Eligible graduation batches |
+| Eligible Departments | Departments allowed to apply |
+| Experience | Required experience level |
+| Location | Work location |
+| Work Mode | On-site, remote, or hybrid |
+| Salary/Stipend | Compensation details |
+| Deadline | Application deadline |
+| Application URL | Where to apply |
+| Source | Origin of the opportunity |
+| Status | Lifecycle status (table below) |
+| Verification Status | AI-extracted or admin-verified |
+| Created/Updated Timestamp | Audit timestamps |
 
-Each opportunity should contain structured information.
+| Status | Meaning |
+| --- | --- |
+| DRAFT | Created but not submitted for review |
+| PENDING_REVIEW | Awaiting admin verification |
+| PUBLISHED | Visible to students |
+| EXPIRED | Deadline passed |
+| ARCHIVED | Retired from active listing |
+| REJECTED | Rejected during review |
 
-Example schema:
+### Job Description Intelligence
 
-Opportunity
-├── Company
-├── Title
-├── Description
-├── Category
-├── Required Skills
-├── Eligibility
-├── Minimum CGPA
-├── Graduation Year
-├── Eligible Departments
-├── Experience
-├── Location
-├── Work Mode
-├── Salary/Stipend
-├── Deadline
-├── Application URL
-├── Source
-├── Status
-├── Verification Status
-└── Created/Updated Timestamp
+When a job description is uploaded, ConnectX extracts role, company, skills, eligibility, experience, education, location, salary/stipend, deadline, responsibilities, preferred skills, and application URL.
 
-Possible statuses:
-
-DRAFT
-PENDING_REVIEW
-PUBLISHED
-EXPIRED
-ARCHIVED
-REJECTED
-
----
-
-10. Job Description Intelligence
-
-When a job description is uploaded, ConnectX should extract:
-
-Role
-Company
-Skills
-Eligibility
-Experience
-Education
-Location
-Salary/Stipend
-Deadline
-Responsibilities
-Preferred Skills
-Application URL
-
-Processing:
-
+```
 Job Description
-       |
-       v
+     |
+     v
 Document Extraction
-       |
-       v
+     |
+     v
 Text Normalization
-       |
-       v
+     |
+     v
 AI Extraction
-       |
-       v
+     |
+     v
 Structured Opportunity
-       |
-       v
+     |
+     v
 Validation
-       |
-       v
+     |
+     v
 Admin Review
-       |
-       v
+     |
+     v
 Publication
+```
 
 AI must not automatically publish unverified information.
 
----
+### Eligibility Engine
 
-11. Eligibility Engine
+Eligibility primarily uses deterministic rules for hard constraints. Example:
 
-Eligibility should primarily use deterministic rules.
-
-Example:
-
+```
 CGPA >= 7.0
 AND
 Graduation Year = 2027
 AND
 Department IN [CSE, ISE, CTIS]
+```
 
-Result:
-
-ELIGIBLE
-
-or:
-
-NOT_ELIGIBLE
+Result: ELIGIBLE or NOT_ELIGIBLE.
 
 AI may explain the result but should not replace deterministic eligibility logic for hard constraints.
 
----
+### AI Matching Engine
 
-12. AI Matching Engine
+The matching engine compares the student profile with opportunity requirements:
 
-The AI matching engine is one of the core components of ConnectX.
-
-The matching engine compares:
-
+```
 Student Profile
         +
 Opportunity Requirements
@@ -447,9 +341,11 @@ Missing Skills
 Eligibility
         +
 Explanation
+```
 
-Example:
+Example output:
 
+```
 Match Score: 88%
 
 Matched Skills:
@@ -462,54 +358,45 @@ Missing Skills:
 - IAM
 - Terraform
 
-Eligibility:
-Eligible
+Eligibility: Eligible
+Recommendation: Strong Match
+```
 
-Recommendation:
-Strong Match
+### Matching Strategy
 
----
+ConnectX does not rely exclusively on keyword matching. The recommended approach is a hybrid architecture:
 
-13. Matching Strategy
-
-ConnectX should not rely exclusively on keyword matching.
-
-The recommended approach is a hybrid architecture:
-
+```
 Hard Eligibility Rules
-        +
+          +
 Skill Normalization
-        +
+          +
 Semantic Embeddings
-        +
+          +
 Weighted Ranking
-        +
+          +
 User Preferences
-        |
-        v
+          |
+          v
 Final Recommendation Score
+```
 
-Example scoring model:
+Example scoring model. Weights are configurable and the exact formula must be validated through testing and real usage data rather than assumed to be optimal.
 
-Skill Match              40%
-Eligibility              20%
-Experience Match         15%
-Role Preference          10%
-Location Preference      10%
-Deadline/Urgency           5%
+| Component | Weight |
+| --- | --- |
+| Skill Match | 40% |
+| Eligibility | 20% |
+| Experience Match | 15% |
+| Role Preference | 10% |
+| Location Preference | 10% |
+| Deadline/Urgency | 5% |
 
-The weights should remain configurable.
+### Explainable AI
 
-The exact formula must be validated through testing and real usage data rather than assumed to be optimal.
+Every recommendation includes an explanation. The platform avoids opaque recommendations whenever possible.
 
----
-
-14. Explainable AI
-
-ConnectX should provide an explanation for recommendations.
-
-Example:
-
+```
 88% Match
 
 Why:
@@ -525,59 +412,40 @@ Skill Gaps:
 
 Recommendation:
 Consider learning IAM and Terraform to improve suitability.
+```
 
-The platform should avoid opaque recommendations whenever possible.
+### Semantic Skill Matching
 
----
+Different representations of the same concept are normalized:
 
-15. Semantic Skill Matching
+| Variant | Normalized |
+| --- | --- |
+| Amazon Web Services | AWS |
+| Amazon EC2 | EC2 |
+| JavaScript | JS |
+| Artificial Intelligence | AI |
+| Machine Learning | ML |
 
-The system should normalize different representations of the same concept.
+Semantic embeddings are used to identify related concepts, moving beyond exact keyword matching.
 
-Examples:
+### Personalized Recommendation Engine
 
-Amazon Web Services -> AWS
-Amazon EC2 -> EC2
-JavaScript -> JS
-Artificial Intelligence -> AI
-Machine Learning -> ML
+Opportunities are ranked using student skills, academic profile, career goals, preferred roles, preferred locations, experience, eligibility, previous applications, saved opportunities, and interaction history. Students see a personalized feed:
 
-Semantic embeddings can be used to identify related concepts.
-
-This enables ConnectX to move beyond exact keyword matching.
-
----
-
-16. Personalized Recommendation Engine
-
-The recommendation system should rank opportunities based on:
-
-Student Skills
-Academic Profile
-Career Goals
-Preferred Roles
-Preferred Locations
-Experience
-Eligibility
-Previous Applications
-Saved Opportunities
-Interaction History
-
-The student should see a personalized feed such as:
-
+```
 Recommended for You
 
 Cloud Security Intern       94%
 SOC Analyst Intern          89%
 AWS Cloud Intern            86%
 DevOps Intern               83%
+```
 
----
+### Skill Gap Analysis
 
-17. Skill Gap Analysis
+The difference between current student skills and target opportunity requirements:
 
-ConnectX should identify the difference between:
-
+```
 Current Student Skills
         |
         v
@@ -585,108 +453,74 @@ Target Opportunity Requirements
         |
         v
 Skill Gap
+```
 
 Example:
 
-Current Skills:
-AWS
-Linux
-Python
-Networking
+```
+Current Skills:  AWS, Linux, Python, Networking
+Required:        AWS, Linux, Python, Networking, IAM, Terraform, SIEM
+Skill Gap:       IAM, Terraform, SIEM
+```
 
-Required:
-AWS
-Linux
-Python
-Networking
-IAM
-Terraform
-SIEM
+The platform can then recommend learning resources or projects to close the gap.
 
-Skill Gap:
-IAM
-Terraform
-SIEM
+### AI Career Assistant
 
-The platform can then recommend learning resources or projects.
+A conversational AI assistant answers questions such as:
 
----
+- Which cloud internships am I eligible for?
+- What skills am I missing for this job?
+- Which opportunity should I apply for first?
+- What should I learn to become a cloud security engineer?
+- Why was this opportunity recommended to me?
+- Show me opportunities closing this week.
 
-18. AI Career Assistant
+The assistant retrieves verified ConnectX data before answering questions related to current opportunities.
 
-ConnectX can provide a conversational AI assistant.
+### Retrieval-Augmented Generation
 
-Example questions:
+For domain-specific questions, ConnectX uses RAG:
 
-Which cloud internships am I eligible for?
-
-What skills am I missing for this job?
-
-Which opportunity should I apply for first?
-
-What should I learn to become a cloud security engineer?
-
-Why was this opportunity recommended to me?
-
-Show me opportunities closing this week.
-
-The assistant should retrieve verified ConnectX data before answering questions related to current opportunities.
-
----
-
-19. Retrieval-Augmented Generation
-
-For domain-specific questions, ConnectX can use RAG.
-
-Architecture:
-
+```
 User Question
-      |
-      v
+     |
+     v
 Intent Detection
-      |
-      v
+     |
+     v
 Retrieval
-      |
-      v
+     |
+     v
 ConnectX Knowledge Base
-      |
-      v
+     |
+     v
 Relevant Documents/Data
-      |
-      v
+     |
+     v
 LLM
-      |
-      v
+     |
+     v
 Grounded Response
+```
 
-Potential knowledge sources:
+Potential knowledge sources include opportunity descriptions, placement policies, career guides, skill definitions, learning resources, and verified university information. The system distinguishes between verified platform data and general AI-generated guidance.
 
-- Opportunity descriptions
-- Placement policies
-- Career guides
-- Skill definitions
-- Learning resources
-- Verified university information
+### Automated Opportunity Ingestion
 
-The system must distinguish between verified platform data and general AI-generated guidance.
+ConnectX supports multiple input sources:
 
----
+| Source | Example |
+| --- | --- |
+| PDF | Job description attachments |
+| Excel | Bulk opportunity sheets |
+| CSV | Imported placement data |
+| Text | Pasted job descriptions |
+| Image | Flyers and screenshots |
+| Admin Form | Manual entry |
+| API | External system integration |
 
-20. Automated Opportunity Ingestion
-
-ConnectX should support multiple input sources.
-
-PDF
-Excel
-CSV
-Text
-Image
-Admin Form
-API
-
-Pipeline:
-
+```
 Source
   |
   v
@@ -709,27 +543,15 @@ Admin Approval
   |
   v
 Publication
+```
 
-Human approval should remain available for sensitive or uncertain records.
+Human approval remains available for sensitive or uncertain records.
 
----
+### Duplicate Opportunity Detection
 
-21. Duplicate Opportunity Detection
+Potential duplicates are identified by comparing company, role, description, deadline, application URL, required skills, and location.
 
-The platform should identify potential duplicates.
-
-Comparison fields:
-
-Company
-Role
-Description
-Deadline
-Application URL
-Required Skills
-Location
-
-Example:
-
+```
 Potential Duplicate: 93%
 
 Existing:
@@ -737,234 +559,117 @@ Cloud Security Intern - XYZ
 
 New:
 Cloud Security Internship - XYZ Technologies
+```
 
-The administrator can confirm whether the records should be merged.
+The administrator confirms whether the records should be merged.
 
----
+### Opportunity Classification
 
-22. Opportunity Classification
+AI can automatically classify opportunities. Administrators can modify classifications.
 
-AI can automatically classify opportunities.
+| Category |
+| --- |
+| Software Development |
+| Cloud Computing |
+| Cybersecurity |
+| Cloud Security |
+| DevOps |
+| Data Science |
+| Artificial Intelligence |
+| Machine Learning |
+| Networking |
+| Finance |
+| Marketing |
+| Design |
+| Research |
+| Other |
 
-Categories may include:
+### Deadline Intelligence
 
-Software Development
-Cloud Computing
-Cybersecurity
-Cloud Security
-DevOps
-Data Science
-Artificial Intelligence
-Machine Learning
-Networking
-Finance
-Marketing
-Design
-Research
-Other
+Deadlines are normalized into machine-readable timestamps. The system can identify: closing today, closing tomorrow, closing in 3 days, closing this week, or expired. The configured timezone is used and ambiguous date interpretation is avoided.
 
-Administrators should be able to modify classifications.
+### Notifications
 
----
+| Notification | Trigger |
+| --- | --- |
+| New highly relevant opportunity | High match score on a new opportunity |
+| Application deadline approaching | Deadline within a configured window |
+| Application status update | Status change on a tracked application |
+| Saved opportunity closing soon | Deadline of a saved opportunity approaching |
+| Profile incomplete | Missing required profile fields |
+| Skill-gap recommendation | Gap identified between profile and target role |
+| Admin announcement | Broadcast from administrators |
 
-23. Deadline Intelligence
+Notification channels can later include in-app, email, and push. Preferences are user-configurable.
 
-ConnectX should normalize deadlines into machine-readable timestamps.
+### Application Tracking
 
-The platform can identify:
-
-Closing Today
-Closing Tomorrow
-Closing in 3 Days
-Closing This Week
-Expired
-
-The system should use the configured timezone and avoid ambiguous date interpretation.
-
----
-
-24. Notifications
-
-Notifications may be generated for:
-
-New highly relevant opportunity
-Application deadline approaching
-Application status update
-Saved opportunity closing soon
-Profile incomplete
-Skill-gap recommendation
-Admin announcement
-
-Notification channels can later include:
-
-In-app
-Email
-Push Notification
-
-Notification preferences should be user-configurable.
-
----
-
-25. Application Tracking
-
-Students should be able to track applications.
-
-Possible states:
-
-SAVED
-APPLIED
-ASSESSMENT
-INTERVIEW
-SHORTLISTED
-SELECTED
-REJECTED
-WITHDRAWN
+| State | Meaning |
+| --- | --- |
+| SAVED | Saved for later |
+| APPLIED | Application submitted |
+| ASSESSMENT | Under screening or assessment |
+| INTERVIEW | Interview stage |
+| SHORTLISTED | Shortlisted by the recruiter |
+| SELECTED | Offer received |
+| REJECTED | Not selected |
+| WITHDRAWN | Withdrawn by the student |
 
 Example:
 
+```
 Cloud Security Intern
 Status: Interview
 Applied: 15 Aug 2026
 Next Step: Technical Interview
+```
 
----
+### Admin Dashboard
 
-26. Admin Dashboard
+Provides a single view of total students, active opportunities, applications, upcoming deadlines, expired opportunities, pending reviews, AI processing status, potential duplicates, and system health. Administrators manage the entire opportunity lifecycle from this dashboard.
 
-The admin dashboard should provide:
-
-Total Students
-Active Opportunities
-Applications
-Upcoming Deadlines
-Expired Opportunities
-Pending Reviews
-AI Processing Status
-Potential Duplicates
-System Health
-
-Administrators should be able to manage the entire opportunity lifecycle.
-
----
-
-27. Analytics
+### Analytics
 
 Potential analytics include:
 
-Most popular roles
-Most requested skills
-Most active companies
-Application conversion rate
-Opportunity category distribution
-Student skill distribution
-Most common skill gaps
-Department-wise applications
-Opportunity engagement
-Application deadlines
+- Most popular roles
+- Most requested skills
+- Most active companies
+- Application conversion rate
+- Opportunity category distribution
+- Student skill distribution
+- Most common skill gaps
+- Department-wise applications
+- Opportunity engagement
+- Application deadlines
 
-AI can later identify trends such as:
+AI can later identify trends (for example, "AWS and cybersecurity skills are increasingly requested"). Such insights must be based on actual platform data.
 
-AWS and cybersecurity skills are increasingly requested.
+## Technology Stack
 
-Such insights must be based on actual platform data.
+| Layer | Technology |
+| --- | --- |
+| Frontend | React, TypeScript, Vite, Tailwind CSS, React Query |
+| Backend | Node.js, Express.js, TypeScript, REST APIs |
+| Database (initial) | MongoDB |
+| Database (production candidate) | Amazon Aurora PostgreSQL |
+| Storage | Amazon S3 |
+| Authentication | Amazon Cognito (or approved identity provider) |
+| AI | Amazon Bedrock |
+| Document Processing | Amazon Textract |
+| Vector Search | Amazon OpenSearch Serverless (or managed vector database) |
+| Cloud Compute | AWS Lambda, Amazon ECS Fargate |
+| Messaging | Amazon SQS, Amazon EventBridge |
+| Notifications | Amazon SES, Amazon SNS |
+| Monitoring | Amazon CloudWatch |
+| Secrets | AWS Secrets Manager |
+| Containers | Docker |
+| CI/CD | GitHub Actions, Amazon ECR |
+| Infrastructure as Code | Terraform |
 
----
+## High-Level Architecture
 
-28. Recommended Technology Stack
-
-Frontend
-
-React
-TypeScript
-Vite
-Tailwind CSS
-React Query
-
-Backend
-
-Node.js
-Express.js
-TypeScript
-REST APIs
-
-Database
-
-Initial development:
-
-MongoDB
-
-Production architecture may use:
-
-Amazon Aurora PostgreSQL
-
-or another managed relational database if relational consistency becomes a priority.
-
-Storage
-
-Amazon S3
-
-Authentication
-
-Amazon Cognito
-
-or another approved identity provider.
-
-AI
-
-Amazon Bedrock
-
-Document Processing
-
-Amazon Textract
-
-Vector Search
-
-Potential options:
-
-Amazon OpenSearch Serverless
-
-or another managed vector database.
-
-Cloud Compute
-
-AWS Lambda
-Amazon ECS Fargate
-
-Messaging
-
-Amazon SQS
-Amazon EventBridge
-
-Notifications
-
-Amazon SES
-Amazon SNS
-
-Monitoring
-
-Amazon CloudWatch
-
-Secrets
-
-AWS Secrets Manager
-
-Containers
-
-Docker
-
-CI/CD
-
-GitHub Actions
-Amazon ECR
-
-Infrastructure as Code
-
-Terraform
-
----
-
-29. High-Level Architecture
-
+```
                          CONNECTX
                             |
              +--------------+--------------+
@@ -1010,47 +715,25 @@ Terraform
               +-------------+-------------+
                             |
                          Amazon S3
+```
 
----
+## Cloud Architecture Principles
 
-30. Cloud Architecture Principles
+| Principle | Application |
+| --- | --- |
+| Scalability | Services scale independently where appropriate. |
+| Reliability | Asynchronous workloads use queues and retry mechanisms. |
+| Security | Least-privilege IAM and private resources. |
+| Observability | Log important application and infrastructure events. |
+| Cost Optimization | Avoid unnecessarily expensive always-on infrastructure. |
+| Fault Tolerance | Failures in AI processing do not bring down the core application. |
+| Automation | Use CI/CD and infrastructure-as-code where practical. |
 
-ConnectX should follow these principles:
+## Event-Driven Architecture
 
-Scalability
+Expensive AI processing never blocks normal API requests. Example resume-processing workflow:
 
-Services should scale independently where appropriate.
-
-Reliability
-
-Asynchronous workloads should use queues and retry mechanisms.
-
-Security
-
-Use least-privilege IAM and private resources.
-
-Observability
-
-Log important application and infrastructure events.
-
-Cost Optimization
-
-Avoid unnecessarily expensive always-on infrastructure.
-
-Fault Tolerance
-
-Failures in AI processing should not bring down the core application.
-
-Automation
-
-Use CI/CD and infrastructure-as-code where practical.
-
----
-
-31. Event-Driven Architecture
-
-Example resume-processing workflow:
-
+```
 Student Uploads Resume
         |
         v
@@ -1082,31 +765,28 @@ Matching Engine
         |
         v
 Recommendations Updated
+```
 
 This prevents expensive AI processing from blocking normal API requests.
 
----
+## Security Architecture
 
-32. Security Architecture
+ConnectX may process sensitive student information. Security controls include:
 
-ConnectX may process sensitive student information.
-
-Security controls must include:
-
-Authentication
+### Authentication
 
 - Secure authentication
 - MFA where appropriate
 - Session management
 - Token validation
 
-Authorization
+### Authorization
 
 - Role-based access control
-- Backend authorization
+- Backend-enforced authorization
 - Resource-level authorization
 
-Data Protection
+### Data Protection
 
 - TLS in transit
 - Encryption at rest
@@ -1114,31 +794,170 @@ Data Protection
 - Database encryption
 - Secure backups
 
-Secrets
+### Secrets Management
 
-Never commit:
+Never commit API keys, passwords, JWT secrets, AWS credentials, or database credentials. Use AWS Secrets Manager, environment variables, and GitHub Actions Secrets as appropriate.
 
-API keys
-Passwords
-JWT secrets
-AWS credentials
-Database credentials
+## Data Privacy
 
-Use:
+ConnectX follows privacy-by-design principles:
 
-AWS Secrets Manager
-Environment variables
-GitHub Actions Secrets
+- Collect only the information necessary to provide career matching and recommendation services.
+- Clearly communicate why information is collected, how it will be used, and how long it will be retained, at the point of collection and in the privacy policy.
+- Allow students to access, correct, export, and delete their personal data.
+- Obtain explicit consent before AI processing of uploaded documents, and clearly label AI-extracted fields for validation.
+- Apply purpose limitation: student data is used only for the intended career services and is never sold or shared with third parties without consent.
+- Enforce role-based access so personal data is visible only to the student and to authorized administrators.
+- Retain data only for as long as needed, and delete or anonymize it after account closure or at the end of the retention period.
+- Comply with applicable data protection regulations (for example, GDPR, the DPDP Act, or other regional requirements).
 
-as appropriate.
+## Getting Started
 
----
+### Prerequisites
 
-33. Data Privacy
+- Node.js 20 or later
+- npm or yarn
+- MongoDB (local instance or MongoDB Atlas)
+- AWS account (for Bedrock, Textract, S3, Cognito, SQS, EventBridge)
+- Docker (for local containers)
+- Terraform (for infrastructure provisioning)
 
-ConnectX should follow privacy-by-design principles.
+### Installation
 
-Requirements:
+1. Clone the repository and install dependencies:
 
-- Collect only necessary information.
-- Clearly communicate why information is collecte
+```bash
+git clone https://github.com/<your-org>/connectx.git
+cd connectx
+```
+
+2. Install backend dependencies:
+
+```bash
+cd server
+npm install
+```
+
+3. Install frontend dependencies:
+
+```bash
+cd ../client
+npm install
+```
+
+4. Configure environment variables (see below).
+
+5. Run database migrations and seed data if applicable.
+
+### Environment Variables
+
+| Variable | Description | Example |
+| --- | --- | --- |
+| PORT | API server port | 4000 |
+| NODE_ENV | Runtime environment | development |
+| MONGODB_URI | MongoDB connection string | mongodb://localhost:27017/connectx |
+| JWT_SECRET | Secret used to sign access tokens | change-me |
+| AWS_REGION | AWS region for all AWS services | us-east-1 |
+| S3_BUCKET | Private S3 bucket for resumes and documents | connectx-private-assets |
+| COGNITO_USER_POOL_ID | Cognito user pool identifier | us-east-1_xxxxx |
+| COGNITO_CLIENT_ID | Cognito app client identifier | xxxxx |
+| BEDROCK_MODEL_ID | Bedrock model for extraction and matching | anthropic.claude-3-5-sonnet-20241022 |
+| VECTOR_INDEX | OpenSearch Serverless vector index name | skill-embeddings |
+| SES_FROM_EMAIL | Verified sender address for notifications | no-reply@connectx.dev |
+| TIMEZONE | Platform timezone used for deadline logic | Asia/Kolkata |
+
+Copy `server/.env.example` to `server/.env` and fill in the values. Never commit `.env` files.
+
+### Running the Application
+
+```bash
+# Backend API
+cd server
+npm run dev
+
+# Frontend app
+cd client
+npm run dev
+```
+
+The frontend runs on http://localhost:5173 and the API on http://localhost:4000 by default.
+
+## Project Structure
+
+```
+connectx/
+├── client/                    # React frontend (Vite + TypeScript + Tailwind)
+│   ├── src/
+│   │   ├── components/        # Reusable UI components
+│   │   ├── pages/             # Route-level pages
+│   │   ├── hooks/             # Custom React hooks
+│   │   ├── services/          # API client and query layer
+│   │   └── types/             # Shared TypeScript types
+│   └── package.json
+├── server/                    # Node.js/Express backend (TypeScript)
+│   ├── src/
+│   │   ├── api/               # REST route handlers
+│   │   ├── services/          # Business logic
+│   │   ├── models/            # Data models
+│   │   ├── middleware/        # Auth, validation, error handling
+│   │   ├── ai/                # Bedrock, Textract, embedding integrations
+│   │   ├── workers/           # Async queue consumers
+│   │   └── config/            # Environment and app configuration
+│   ├── tests/                 # Unit and integration tests
+│   └── package.json
+├── infra/                     # Terraform infrastructure as code
+├── .github/workflows/         # CI/CD pipelines
+├── .env.example
+├── docker-compose.yml
+└── README.md
+```
+
+## API Overview
+
+All protected endpoints require a Bearer token. Authorization is always enforced server-side.
+
+| Method | Endpoint | Access | Description |
+| --- | --- | --- | --- |
+| POST | /api/auth/register | Public | Register a student account |
+| POST | /api/auth/login | Public | Authenticate and obtain a token |
+| GET | /api/students/me | STUDENT | Get the current student profile |
+| PUT | /api/students/me | STUDENT | Update the student profile |
+| POST | /api/students/me/resume | STUDENT | Upload a resume for processing |
+| GET | /api/opportunities | STUDENT, ADMIN | List opportunities (ranked for students) |
+| GET | /api/opportunities/:id | STUDENT, ADMIN | Opportunity details with match explanation |
+| POST | /api/opportunities | ADMIN | Create an opportunity |
+| PUT | /api/opportunities/:id | ADMIN | Update an opportunity |
+| POST | /api/opportunities/import | ADMIN | Import opportunities from PDF/CSV/Excel |
+| POST | /api/opportunities/:id/approve | ADMIN | Approve and publish an opportunity |
+| GET | /api/recommendations | STUDENT | Personalized opportunity feed |
+| POST | /api/opportunities/:id/save | STUDENT | Save an opportunity |
+| GET | /api/applications | STUDENT, ADMIN | List applications |
+| POST | /api/applications | STUDENT | Submit an application |
+| PATCH | /api/applications/:id/status | ADMIN | Update application status |
+| POST | /api/assistant/chat | STUDENT | Ask the AI career assistant |
+| GET | /api/admin/analytics | ADMIN | Analytics dashboard data |
+| GET | /api/admin/audit-logs | SUPER_ADMIN | Audit log review |
+
+## Roadmap
+
+| Phase | Scope |
+| --- | --- |
+| Phase 1 - Foundation | Authentication and RBAC, student profiles, opportunity CRUD, admin portal, application tracking |
+| Phase 2 - Intelligence | Resume parsing, JD extraction, eligibility engine, hybrid matching engine, explainable recommendations |
+| Phase 3 - Scale | RAG career assistant, automated ingestion pipelines, duplicate detection, notifications, analytics |
+| Phase 4 - Productionization | Terraform infrastructure, CI/CD, monitoring and alerting, load and penetration testing, tenant hardening |
+
+## Contributing
+
+Contributions are welcome. Please follow the standard flow:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes with tests.
+4. Open a pull request describing the change and any related issue.
+
+Follow the existing code style, keep TypeScript strict mode enabled, and never commit secrets.
+
+## License
+
+MIT License. See the LICENSE file for details.
