@@ -1,4 +1,4 @@
-# ConnectX
+# Connect X
 
 AI-Driven Career Intelligence and Opportunity Management Platform
 
